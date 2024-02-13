@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+form {
+  width: 600px;
+  padding: 20px;
+}
+
+.navbar {
+  float: right;
+}
+
+.navbar .navbar-nav a {
+  color: black;
+  display: inline-block;
+  margin: 0 0.5rem;
+}
+
+ul li {
+  display: inline;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+table img {
+  height: 100px;
+}
