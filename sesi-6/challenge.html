@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Challenge</title>
+  </head>
+  <body>
+    <input type="text" id="input1" />
+    <br />
+    <input type="text" id="input2" />
+    <br />
+    <button onclick="perkalian()">X</button>
+    <button onclick="pembagian()">:</button>
+    <button onclick="penambahan()">+</button>
+    <button onclick="pengurangan()">-</button>
+    <hr />
+    <h1 id="hasil">HASIL</h1>
+    <script>
+      const perkalian = () => {
+        const input1 = document.getElementById('input1').value;
+        const input2 = document.getElementById('input2').value;
+        const hasil = input1 * input2;
+        document.getElementById('hasil').innerHTML = hasil;
+      };
+      const pembagian = () => {
+        const input1 = document.getElementById('input1').value;
+        const input2 = document.getElementById('input2').value;
+        const hasil = input1 / input2;
+        document.getElementById('hasil').innerHTML = hasil;
+      };
+      const penambahan = () => {
+        const input1 = document.getElementById('input1').value;
+        const input2 = document.getElementById('input2').value;
+        const hasil = parseInt(input1) + parseInt(input2);
+        document.getElementById('hasil').innerHTML = hasil;
+      };
+      const pengurangan = () => {
+        const input1 = document.getElementById('input1').value;
+        const input2 = document.getElementById('input2').value;
+        const hasil = input1 - input2;
+        document.getElementById('hasil').innerHTML = hasil;
+      };
+    </script>
+  </body>
+</html>

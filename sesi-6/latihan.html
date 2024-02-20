@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Challenge</title>
+  </head>
+  <body>
+    <h1 id="perkalian"></h1>
+    <h1 id="pembagian"></h1>
+    <h1 id="penambahan"></h1>
+    <h1 id="pengurangan"></h1>
+    <h1 id="pangkatdua"></h1>
+    <script>
+      const perkalian = (a, b) => {
+        return a * b;
+      };
+
+      document.getElementById('perkalian').innerHTML = perkalian(5, 5);
+
+      const pembagian = (a, b) => {
+        return a / b;
+      };
+
+      document.getElementById('pembagian').innerHTML = pembagian(10, 5);
+
+      const penambahan = (a, b) => {
+        return a + b;
+      };
+
+      document.getElementById('penambahan').innerHTML = penambahan(5, 5);
+
+      const pengurangan = (a, b) => {
+        return a - b;
+      };
+
+      document.getElementById('pengurangan').innerHTML = pengurangan(5, 4);
+
+      const pangkatDua = (angka) => {
+        const hasil = angka * angka;
+        console.log(hasil);
+        return hasil;
+      };
+      document.getElementById('pangkatdua').innerHTML = pangkatDua(7, 7);
+    </script>
+  </body>
+</html>

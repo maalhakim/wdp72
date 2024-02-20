@@ -8,60 +8,63 @@
   </head>
   <body>
     <!--Navbar-->
-    <nav class="navbar">
-      <div class="navbar-nav">
+    <div class="header">
+      <nav class="navbar">
         <a href="#">HOME</a>
         <a href="#">PRODUCT</a>
         <a href="#">GALLERY</a>
         <a href="#">BLOG</a>
         <a href="#">MY INVENTORY</a>
-      </div>
-    </nav>
+      </nav>
+    </div>
     <!--Navbar End-->
     <!--Hero Section-->
-    <section class="hero" id="#">
-      <main class="content">
-        <img src="img/pc1.jpeg" alt="gambar pc" />
-        <h2>Hakim</h2>
-        <p>Front End Design</p>
-        <a href="" class="contact">Kontak</a>
-        <a href="" class="resume">Resume</a>
-        <p></p>
-      </main>
-    </section>
+    <div class="hero">
+      <table>
+        <tr>
+          <td class="t1">
+            <img src="img/pc1.jpeg" alt="" />
+          </td>
+          <td class="t2">
+            <h2>Nama Anda</h2>
+            <p>Front End Designer</p>
+            <a href="#" class="btn1">Kontak</a>
+            <a href="#" class="btn2">Resume</a>
+          </td>
+          <td class="t3">
+            <h4>Availability</h4>
+            <h4>Usia</h4>
+            <h4>Lokasi</h4>
+            <h4>Pengalaman</h4>
+            <h4>Email</h4>
+          </td>
+          <td class="t4">
+            <p>Full Time</p>
+            <p>19</p>
+            <p>Jakarta</p>
+            <p>2</p>
+            <p>email@gmail.com</p>
+          </td>
+        </tr>
+      </table>
+    </div>
     <!--Hero Section End-->
-    <form action="" method="post">
-      <div>
-        <label for="nama">Nama</label>
-        <input type="text" name="nama" id="nama" />
-      </div>
-      <div>
-        <label for="role">Role</label>
-        <input type="text" name="role" id="role" />
-      </div>
-      <div>
-        <label for="availability">Availability</label>
-        <input type="text" name="availability" id="availability" />
-      </div>
-      <div>
-        <label for="usia">Usia</label>
-        <input type="text" name="usia" id="usia" />
-      </div>
-      <div>
-        <label for="lokasi">Lokasi</label>
-        <input type="text" name="lokasi" id="lokasi" />
-      </div>
-      <div>
-        <label for="yexp">Years Experience</label>
-        <input type="text" name="yexp" id="yexp" />
-      </div>
-      <div>
-        <label for="email">Email</label>
-        <input type="text" name="email" id="email" />
-      </div>
-      <div>
-        <button type="submit">Submit</button>
-      </div>
-    </form>
+    <div class="finput">
+      <label for="fname">Nama</label><br />
+      <input type="text" id="fname" name="fname" /><br />
+      <label for="lname">Role</label><br />
+      <input type="text" id="lname" name="lname" /><br />
+      <label for="lname">Availability</label><br />
+      <input type="text" id="lname" name="lname" /><br />
+      <label for="lname">Age</label><br />
+      <input type="text" id="lname" name="lname" /><br />
+      <label for="lname">Lokasi</label><br />
+      <input type="text" id="lname" name="lname" /><br />
+      <label for="lname">Years Experience</label><br />
+      <input type="text" id="lname" name="lname" /><br />
+      <label for="lname">Email</label><br />
+      <input type="text" id="lname" name="lname" /><br />
+      <input type="submit" class="btn_submit" value="SUBMIT" />
+    </div>
   </body>
 </html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!--Navbar-->
+    <div class="header">
+      <nav class="navbar">
+        <a href="#">HOME</a>
+        <a href="#">PRODUCT</a>
+        <a href="#">GALLERY</a>
+        <a href="#">BLOG</a>
+        <a href="#">MY INVENTORY</a>
+      </nav>
+    </div>
+    <!--Navbar End-->
+    <!--Hero Section-->
+    <div class="hero">
+      <table>
+        <tr>
+          <td class="t1">
+            <img src="img/pc1.jpeg" alt="" />
+          </td>
+          <td class="t2">
+            <h2 id="nama">Nama Anda</h2>
+            <p id="role">Front End Designer</p>
+            <button onclick="gantiIsi()" class="btn1">Edit</button>
+            <a href="#" class="btn2">Resume</a>
+          </td>
+          <td class="t3">
+            <h4>Availability</h4>
+            <h4>Usia</h4>
+            <h4>Lokasi</h4>
+            <h4>Pengalaman</h4>
+            <h4>Email</h4>
+          </td>
+          <td class="t4">
+            <p id="ava">Full Time</p>
+            <p id="age">19</p>
+            <p id="lok">Jakarta</p>
+            <p id="peng">2</p>
+            <p id="em">email@gmail.com</p>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <!--Hero Section End-->
+    <div class="finput">
+      <label for="fname">Nama</label><br />
+      <input type="text" id="newName" /><br />
+      <label for="lname">Role</label><br />
+      <input type="text" id="irole" /><br />
+      <label for="lname">Availability</label><br />
+      <input type="text" id="iavai" /><br />
+      <label for="lname">Age</label><br />
+      <input type="text" id="iage" /><br />
+      <label for="lname">Lokasi</label><br />
+      <input type="text" id="ilok" /><br />
+      <label for="lname">Years Experience</label><br />
+      <input type="text" id="iexp" /><br />
+      <label for="lname">Email</label><br />
+      <input type="text" id="iemail" /><br />
+      <input type="submit" class="btn_submit" value="SUBMIT" />
+    </div>
+    <script>
+      const isi = document.querySelector('#nama');
+      const inputIsi = document.querySelector('#newName');
+
+      const isiRole = document.querySelector('#role');
+      const inputRole = document.querySelector('#irole');
+
+      const isiAvai = document.querySelector('#ava');
+      const inputAvai = document.querySelector('#iavai');
+
+      const isiAge = document.querySelector('#age');
+      const inputAge = document.querySelector('#iage');
+
+      const isiLok = document.querySelector('#lok');
+      const inputLok = document.querySelector('#ilok');
+
+      const isiExp = document.querySelector('#peng');
+      const inputExp = document.querySelector('#iexp');
+
+      const isiEm = document.querySelector('#em');
+      const inputEm = document.querySelector('#iemail');
+
+      function gantiIsi() {
+        inputIsi.value = isi.innerHTML;
+        inputRole.value = isiRole.innerHTML;
+        inputAvai.value = isiAvai.innerHTML;
+        inputAge.value = isiAge.innerHTML;
+        inputLok.value = isiLok.innerHTML;
+        inputExp.value = isiExp.innerHTML;
+        inputEm.value = isiEm.innerHTML;
+      }
+
+      function simpanIsi() {
+        isi.innerHTML = inputIsi.value;
+        isiRole.innerHTML = inputRole.value;
+        isiAvai.innerHTML = inputAvai.value;
+        isiAge.innerHTML = inputAge.value;
+        isiLok.innerHTML = inputLok.value;
+        isiExp.innerHTML = inputExp.value;
+        isiEm.innerHTML = inputEm.value;
+      }
+
+      const newIsi = document.createElement('h2');
+      newIsi.innerHTML = 'Ini Isi Baru';
+
+      const newRole = document.createElement('#role');
+      newRole.innerHTML = 'Ini Role Baru';
+
+      const newAvai = document.createElement('#iavai');
+      newAvai.innerHTML = 'Ini Availability Baru';
+
+      const newAge = document.createElement('#iage');
+      newAge.innerHTML = 'Ini Age Baru';
+
+      const newLok = document.createElement('#ilok');
+      newLok.innerHTML = 'Ini Lokasi Baru';
+
+      const newExp = document.createElement('#iexp');
+      newExp.innerHTML = 'Ini Experience Baru';
+
+      const newEm = document.createElement('#iem');
+      newEm.innerHTML = 'Ini Email Baru';
+    </script>
+  </body>
+</html>
