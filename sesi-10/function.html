@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //1
+      function cetakTanggalSekarang() {
+        let tanggalSekarang = new Date();
+        console.log('Tanggal hari ini: ' + tanggalSekarang.toDateString());
+      }
+
+      //cetak tanggal sekarang
+      cetakTanggalSekarang();
+
+      //2
+      function dapatkanTanggalSekarang() {
+        let tanggalSekarang = new Date();
+        return tanggalSekarang.toDateString();
+      }
+
+      // Panggil fungsi untuk mendapatkan tanggal sekarang
+      let tanggalSekarang = dapatkanTanggalSekarang();
+
+      // Cetak hasil dari fungsi
+      console.log('Tanggal hari ini: ' + tanggalSekarang);
+    </script>
+  </body>
+</html>

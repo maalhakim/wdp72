@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function cekGanjilGenap(angka) {
+        // Pengecekan tipe data
+        if (typeof angka !== 'number' || isNaN(angka)) {
+          return 'Invalid Data';
+        }
+
+        // Pengecekan ganjil atau genap
+        if (angka % 2 === 0) {
+          return 'genap';
+        } else {
+          return 'ganjil';
+        }
+      }
+
+      // Pengujian dengan angka yang diberikan
+      console.log(cekGanjilGenap(2)); // Output: "genap"
+      console.log(cekGanjilGenap('aaa')); // Output: "ganjil"
+      console.log(cekGanjilGenap(20)); // Output: "genap"
+      console.log(cekGanjilGenap(21)); // Output: "ganjil"
+    </script>
+  </body>
+</html>

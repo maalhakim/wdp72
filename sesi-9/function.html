@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="diskon"></p>
+    <script>
+      //Fungsi untuk menghitung total diskon
+      function hitungTotalDiskon(harga, diskon) {
+        return harga - harga * diskon;
+      }
+
+      let result = hitungTotalDiskon(100000, 0.2);
+      console.log(result);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //Objek Deskripsi Diri
+      let saya = {
+        nama_depan: 'Abdullah',
+        nama_belakang: 'Alhakim',
+        hobi: ['Berenang', 'Badminton'],
+        angka_favorit: 9,
+        memakai_kacamata: true,
+      };
+
+      //Objek Menampilkan Property
+      console.log(saya);
+
+      //Menambahkan Property
+      console.log('Nama Depan:' + saya.nama_depan);
+      console.log('Nama Belakang:' + saya.nama_belakang);
+      console.log('Hobi:' + saya.hobi);
+      console.log('Angka Favorit:' + saya.angka_favorit);
+      console.log('Memakai Kacamata:' + saya.memakai_kacamata);
+
+      //Ubah Angka Favorit
+      saya.angka_favorit = 8;
+      console.log('Angka Favorit:' + saya.angka_favorit);
+
+      //Menambah Hobi Coding
+      saya.hobi.push('coding');
+      console.log('Hobi:' + saya.hobi);
+
+      //Menambahkan Lulusan dengan value "Hacktiv8"
+      saya.lulusan = 'Hacktiv8';
+      console.log('Lulusan:' + saya.lulusan);
+
+      //Cetak semua hobi satu persatu dengan loop
+      console.log('Semua Hobi:');
+      for (let i = 0; i < saya.hobi.leght; i++) {
+        console.log(i + 1 + '.' + saya.hobi[i]);
+      }
+
+      // Cetak semua key milik objek, dan cetak semua values milik objek
+      for (let key in saya) {
+        console.log(key + ': ' + saya[key]);
+      }
+
+      //Cetak semua key milik objek, dan cetak semua values milik objek
+      console.log('I');
+      for (let key in saya) {
+        console.log(key);
+      }
+
+      //Gunakan loop untuk cetak semua property milik objek dengan format key : values
+      console.log('J');
+      for (let key in saya) {
+        console.log(key + ':' + saya[key]);
+      }
+    </script>
+  </body>
+</html>

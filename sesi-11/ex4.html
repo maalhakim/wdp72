@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function isArithmeticProgression(numbers) {
+        if (numbers.length <= 2) {
+          return true; // Jika panjang array kurang dari atau sama dengan 2, maka itu dianggap deret aritmatika
+        }
+
+        var difference = numbers[1] - numbers[0]; // Hitung selisih pertama
+
+        for (var i = 2; i < numbers.length; i++) {
+          if (numbers[i] - numbers[i - 1] !== difference) {
+            return false; // Jika perbedaan antara dua angka tidak konsisten, bukan deret aritmatika
+          }
+        }
+
+        return true; // Jika semua perbedaan antara dua angka konsisten, itu adalah deret aritmatika
+      }
+
+      // Contoh penggunaan:
+      console.log(isArithmeticProgression([1, 2, 3, 4, 5, 6])); // Output: true
+      console.log(isArithmeticProgression([2, 4, 6, 12, 24])); // Output: false
+      console.log(isArithmeticProgression([2, 4, 6, 8])); // Output: true
+      console.log(isArithmeticProgression([2, 6, 18, 54])); // Output: false
+      console.log(isArithmeticProgression([1, 2, 3, 4, 7, 9])); // Output: true
+    </script>
+  </body>
+</html>

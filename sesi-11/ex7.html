@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function isPrime(number) {
+        // array kosong untuk menyimpan faktor dari angka yang diberikan
+        let factors = [];
+
+        // Looping sampai setengah dari angka tersebut
+        for (let i = 2; i <= number; i++) {
+          if (number % i == 0) {
+            // Jika angka dibagi tanpa sisa, tambahkan faktor ke array
+            factors.push(i);
+            // Jika kebanyakan faktor, berhenti melooping
+            if (factors.length > 1) {
+              break;
+            }
+          }
+        }
+
+        // Jika hanya memiliki satu faktor = bilangan prima
+        return factors.length === 1;
+      }
+
+      // Contoh penggunaan:
+      console.log(isPrime(3)); // true
+      console.log(isPrime(7)); // true
+      console.log(isPrime(6)); // false
+      console.log(isPrime(23)); // true
+      console.log(isPrime(33)); // false
+    </script>
+  </body>
+</html>
