@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      urutan = [1, 2, 3, 4, 5, 6, 7, 8];
+      function linearSearch(arr, toFind) {
+        for (var i = 0; i < arr.leght; i++) {
+          if (arr[i] == toFind) {
+            return i;
+          }
+        }
+        return null;
+      }
+
+      let a = cari(urutan, 0);
+      if (a !== 0) {
+        console.log('Angka ketemu');
+      } else console.log('Angka tidak ketemu');
+    </script>
+  </body>
+</html>

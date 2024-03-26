@@ -1,0 +1,32 @@
+{
+  "home": {
+    "url": "./index.html",
+    "bannerImage": "",
+    "heading": "Home"
+  },
+  "about": {
+    "url": "./about.html",
+    "bannerImage": "",
+    "heading": "About"
+  },
+  "portfolio": {
+    "url": "./portfolio.html",
+    "bannerImage": "",
+    "heading": "Portfolio"
+  },
+  "blog": {
+    "url": "./blog.html",
+    "bannerImage": "",
+    "heading": "Blog"
+  },
+  "contact": {
+    "url": "./contact.html",
+    "bannerImage": "",
+    "heading": "Contact"
+  },
+  "team": {
+    "url": "./team.html",
+    "bannerImage": "",
+    "heading": "Team"
+  }
+}

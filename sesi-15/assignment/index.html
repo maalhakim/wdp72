@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>COVID-19 Tracker</title>
+    <!-- Load Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!--CSS-->
+    <link rel="stylesheet" href="style.css" />
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700&display=swap" rel="stylesheet" />
+    <!--Icons-->
+    <script src="https://kit.fontawesome.com/679d9ef5cc.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="big-box">
+        <h1>COVID-19 TRACKER</h1>
+        <form class="form-searching d-flex" role="search" onsubmit="return false;">
+          <input id="searchInput" class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+          <button id="getDataButton" class="btn btn-outline-success col-md-4" type="button">Get Data</button>
+        </form>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="box">
+              <i class="icons fa-solid fa-virus-covid"></i>
+              <h2 id="activeCases">Active Cases</h2>
+              <p id="activeCasesData">Loading...</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="box">
+              <i class="icons fa-solid fa-virus"></i>
+              <h2 id="newCases">New Cases</h2>
+              <p id="newCasesData">Loading...</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="box">
+              <i class="icons fa-solid fa-vial-circle-check"></i>
+              <h2 id="recoveredCases">Recovered Cases</h2>
+              <p id="recoveredCasesData">Loading...</p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="box">
+              <i class="icons fa-solid fa-square-virus"></i>
+              <h2 id="totalCases">Total Cases</h2>
+              <p id="totalCasesData">Loading...</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="box">
+              <i class="icons fa-solid fa-skull-crossbones"></i>
+              <h2 id="totalDeaths">Total Deaths</h2>
+              <p id="totalDeathsData">Loading...</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="box">
+              <i class="icons fa-solid fa-suitcase-medical"></i>
+              <h2 id="totalTests">Total Tests</h2>
+              <p id="totalTestsData">Loading...</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Load Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    <!--Fetch API-->
+    <script>
+      async function fetchData(country) {
+        const url = `https://covid-193.p.rapidapi.com/statistics?country=${country}`;
+        const options = {
+          method: 'GET',
+          headers: {
+            'x-rapidapi-key': '8bfdf9f622msha8d6de3bcd3ef6cp1bb9a2jsn19f5d4f25606',
+            'x-rapidapi-host': 'covid-193.p.rapidapi.com',
+          },
+        };
+
+        try {
+          const response = await fetch(url, options);
+          const data = await response.json();
+          const countryData = data.response[0]; // Ambil data dari negara pertama dalam respons
+          document.getElementById('activeCasesData').textContent = countryData.cases.active;
+          document.getElementById('newCasesData').textContent = countryData.cases.new;
+          document.getElementById('recoveredCasesData').textContent = countryData.cases.recovered;
+          document.getElementById('totalCasesData').textContent = countryData.cases.total;
+          document.getElementById('totalDeathsData').textContent = countryData.deaths.total;
+          document.getElementById('totalTestsData').textContent = countryData.tests.total;
+        } catch (error) {
+          console.error(error);
+        }
+      }
+
+      // Panggil fungsi fetchData saat halaman dimuat
+      fetchData('all');
+
+      document.getElementById('getDataButton').addEventListener('click', function () {
+        const searchTerm = document.getElementById('searchInput').value.trim();
+        if (searchTerm !== '') {
+          fetchData(searchTerm);
+        } else {
+          fetchData('all'); // Jika tidak ada input, ambil data untuk semua negara
+        }
+      });
+    </script>
+  </body>
+</html>
