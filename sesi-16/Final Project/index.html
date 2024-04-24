@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,700;1,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+
+    <title>CA Web Develope</title>
+    <link href="dist/output.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header class="bg-transparent absolute top-0 left-0 w-full flex items-center z-10">
+      <div class="container">
+        <div class="flex items-center justify-between relative">
+          <h2 class="font-bold italic lg:text-3xl">CA Web Develope</h2>
+          <div class="flex items-center px-4">
+            <button id="hamburger" name="hamburger" type="button" class="block absolute right-4 lg:hidden">
+              <span class="hamburger-line transition duration-300 ease-in-out origin-top-left"></span>
+              <span class="hamburger-line transition duration-300 ease-in-out"></span>
+              <span class="hamburger-line transition duration-300 ease-in-out origin-bottom-left"></span>
+            </button>
+
+            <nav id="nav-menu" class="hidden absolute py-5 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none">
+              <ul class="block lg:flex">
+                <li class="group">
+                  <a href="index.html" class="text-base text-dark py-2 mx-8 flex group-hover:text-dark transition duration-300 ease-in-out hover:scale-110">Home</a>
+                </li>
+                <li class="group">
+                  <a href="#" class="text-base text-dark py-2 mx-8 flex group-hover:text-dark transition duration-300 ease-in-out hover:scale-110">Portfolio</a>
+                </li>
+                <li class="group">
+                  <a href="#" class="text-base text-dark py-2 mx-8 flex group-hover:text-dark transition duration-300 ease-in-out hover:scale-110">Blog</a>
+                </li>
+                <li class="group">
+                  <a href="#" class="text-base text-dark py-2 mx-8 flex group-hover:text-dark transition duration-300 ease-in-out hover:scale-110">About Us</a>
+                </li>
+                <li class="group">
+                  <a href="#" class="text-base text-dark py-2 mx-8 flex group-hover:text-dark transition duration-300 ease-in-out hover:scale-110">Contact</a>
+                </li>
+                <li class="group">
+                  <a href="todo.html" class="text-base text-dark py-2 mx-8 flex group-hover:text-dark transition duration-300 ease-in-out hover:scale-110">Todos</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Header Section End -->
+
+    <!-- Beranda Section -->
+    <div class="bg-gradient-to-bl from-primary to-white to-50%">
+      <section id="home" class="pt-36">
+        <div class="container">
+          <div class="flex flex-wrap">
+            <div class="w-full self-center px-4 lg:w-1/2">
+              <h1 class="text-base font-semibold text-pink md:text-xl mb-3">
+                Welcome to CA Web Develope <span class="animate-wiggle">👋</span><span class="block font-bold text-dark text-4xl mt-1 lg:text-4xl">Code <span class="text-primary">| Create |</span> Innovate</span>
+              </h1>
+              <p class="font-medium text-slate-500 mb-10">Where <span class="text-dark font-semibold">Innovation</span> Meets Design</p>
+              <button id="open-modal" class="text-base font-semibold text-white mt-10 bg-primary py-2 px-8 rounded-lg hover:opacity-80 transition duration-300">Order Now</button>
+              <div id="modal" class="fixed z-10 inset-0 overflow-y-auto hidden">
+                <div class="flex items-center justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+                  <!-- Bagian latar belakang modal -->
+                  <div class="fixed inset-0 transition-opacity" aria-hidden="true">
+                    <div class="absolute inset-0 bg-gray-500 opacity-75"></div>
+                  </div>
+
+                  <!-- Konten modal -->
+                  <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
+                  <div
+                    class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full"
+                    role="dialog"
+                    aria-modal="true"
+                    aria-labelledby="modal-headline"
+                  >
+                    <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+                      <div class="sm:flex sm:items-start">
+                        <!-- Judul modal -->
+                        <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
+                          <div class="relative overflow-x-auto">
+                            <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+                              <thead class="text-xs text-gray-700 uppercase bg-gray-100 dark:bg-gray-700 dark:text-gray-400">
+                                <tr>
+                                  <th scope="col" class="px-6 py-3 rounded-s-lg">Plan Features</th>
+                                  <th scope="col" class="px-6 py-3">Lorem, ipsum dolor.</th>
+                                  <th scope="col" class="px-6 py-3 rounded-e-lg">Lorem, ipsum dolor.</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr class="bg-white dark:bg-gray-800">
+                                  <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">Web Space</th>
+                                  <td class="px-6 py-4">lorem</td>
+                                  <td class="px-6 py-4">lorem</td>
+                                </tr>
+                                <tr class="bg-white dark:bg-gray-800">
+                                  <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">Bandwith</th>
+                                  <td class="px-6 py-4">lorem</td>
+                                  <td class="px-6 py-4">lorem</td>
+                                </tr>
+                                <tr class="bg-white dark:bg-gray-800">
+                                  <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">Storage</th>
+                                  <td class="px-6 py-4">lorem</td>
+                                  <td class="px-6 py-4">lorem</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
+                      <button id="close-modal" type="button" class="text-base font-semibold text-white mt-10 bg-primary py-2 px-8 rounded-lg hover:opacity-80 transition duration-300">X</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="w-full self-end px-4 lg:w-1/2">
+              <div class="relative mt-10 lg:mt-9 lg:right-10">
+                <img src="dist/img/1.png" class="max-w-md mx-auto animate-bounce-slow" />
+                <span class="absolute bottom-0 -z-10 left-1/2 -translate-x-1/2 md:scale-150"> </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- Beranda Section End -->
+
+    <!-- About Section Start-->
+    <section id="portfolio" class="pt-36 pb-32 bg-slate-200">
+      <div class="container">
+        <div class="flex flex-wrap">
+          <div class="w-full px-4 mb-10 lg:w-1/2">
+            <h4 class="font-bold uppercase text-dark text-lg mb-3">Kenapa harus di</h4>
+            <h2 class="font-bold text-primary text-3xl mb-3 max-w-md lg:text-4xl">CA Web Develope ?</h2>
+            <p class="font-medium text-base text-secondary max-w-xl lg:text-lg mb-10">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, quibusdam? Aliquam illo obcaecati magni cum qui dolore corrupti odio itaque.</p>
+            <p class="font-medium text-base text-secondary max-w-xl lg:text-lg">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum tempore eaque fugiat in porro ducimus nisi odit culpa placeat unde!</p>
+            <h3 class="font-semibold text-dark text-2xl mb-4 mt-4 lg:text-xl lg:pt-10">Apa yang anda dapatkan :</h3>
+            <div class="flex items-center">
+              <ul>
+                <li>&#x2022; Lorem ipsum dolor sit amet consectetur.</li>
+                <li>&#x2022; Lorem ipsum dolor sit amet consectetur.</li>
+                <li>&#x2022; Lorem ipsum dolor sit amet consectetur.</li>
+                <li>&#x2022; Lorem ipsum dolor sit amet consectetur.</li>
+                <li>&#x2022; Lorem ipsum dolor sit amet consectetur.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="w-ful px-4 lg:w-1/2">
+            <h3 class="font-semibold text-dark text-2xl mb-4 lg:text-xl lg:pt-10">Mengapa memilih kami :</h3>
+            <div class="flex items-center">
+              <ul>
+                <li>&#x2022;Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                <li>&#x2022;Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis.</li>
+                <li>&#x2022;Lorem, ipsum dolor sit amet consectetur adipisicing.</li>
+                <li>&#x2022;Lorem ipsum dolor, sit amet consectetur adipisicing elit.</li>
+              </ul>
+            </div>
+            <h3 class="font-semibold text-dark text-2xl mb-4 lg:text-xl lg:pt-10">Harga Terjangkau</h3>
+            <div class="flex items-center">
+              <p class="font-medium text-base text-secondary max-w-xl lg:text-lg mb-10">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, nobis officiis. Minima suscipit ratione deserunt minus recusandae laboriosam repellendus earum.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- About End -->
+
+    <!-- Program Section -->
+    <section id="program" class="pt-36 pb-32">
+      <div class="container">
+        <div class="w-full px-4">
+          <div class="max-w-xl mx-auto text-center mb-16">
+            <h4 class="font-semibold text-lg text-primary mb-2">WE CREATIVE QUALITY DESIGNS.</h4>
+            <h2 class="font-bold text-dark text-xl mb-4 sm:text-4xl lg:text-5xl">Lorem, ipsum dolor.</h2>
+            <p></p>
+          </div>
+        </div>
+        <div class="flex flex-wrap">
+          <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden mb-10">
+              <img src="https://source.unsplash.com/360x200?webdesign" alt="lempuing" class="w-full" />
+              <div class="py-8 px-6">
+                <h3 class="mb-4 font-semibold text-xl text-dark truncate text-center">Web Develope</h3>
+                <hr class="mb-5" />
+                <p class="text-dark">&#x2022; Lorem ipsum dolor sit.</p>
+                <p class="text-dark">&#x2022; Lorem ipsum dolor sit.</p>
+                <p class="text-dark">&#x2022; Lorem ipsum dolor sit.</p>
+                <p class="text-dark mb-5">&#x2022; Lorem ipsum dolor sit.</p>
+                <hr class="mb-5" />
+              </div>
+            </div>
+          </div>
+          <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden mb-10">
+              <img src="https://source.unsplash.com/360x200?web" alt="okiokut" class="w-full" />
+              <div class="py-8 px-6">
+                <h3 class="mb-4 font-semibold text-xl text-dark hover:text-primary truncate text-center">Web Design</h3>
+                <hr class="mb-5" />
+                <p class="text-dark">&#x2022; Lorem ipsum dolor sit.</p>
+                <p class="text-dark">&#x2022; Lorem ipsum dolor sit.</p>
+                <p class="text-dark">&#x2022; Lorem ipsum dolor sit.</p>
+                <p class="text-dark mb-5">&#x2022; Lorem ipsum dolor sit.</p>
+                <hr class="mb-5" />
+              </div>
+            </div>
+          </div>
+          <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden mb-10">
+              <img src="https://source.unsplash.com/360x200?pc" alt="lematang" class="w-full" />
+              <div class="py-8 px-6">
+                <h3 class="mb-4 font-semibold text-xl text-dark hover:text-primary truncate text-center">Graphic Design</h3>
+                <hr class="mb-5" />
+                <p class="text-dark">&#x2022; Lorem ipsum dolor sit.</p>
+                <p class="text-dark">&#x2022; Lorem ipsum dolor sit.</p>
+                <p class="text-dark">&#x2022; Lorem ipsum dolor sit.</p>
+                <p class="text-dark mb-5">&#x2022; Lorem ipsum dolor sit.</p>
+                <hr class="mb-5" />
+
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Program Section End -->
+
+    <!-- Testimonials Section -->
+    <div class="bg-local bg-opacity-80" style="background-image: url(dist/img/bg1.jpg)">
+      <section id="testimonials" class="pt-36 pb-32">
+        <div class="container">
+          <div class="w-full px-4">
+            <div class="max-w-xl mx-auto text-center mb-16">
+              <h4 class="font-semibold text-lg text-primary mb-2">Testimonials</h4>
+              <h2 class="font-bold text-dark text-3xl mb-4 sm:text-4xl lg:text-4xl">Cerita Client</h2>
+            </div>
+          </div>
+
+          <div class="grid gap-x-6 md:grid-cols-3 lg:gap-x-12">
+            <div class="mb-12 md:mb-0">
+              <div class="mb-6 flex justify-center">
+                <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(11).jpg" class="w-32 rounded-full shadow-lg dark:shadow-black/20" />
+              </div>
+              <h5 class="mb-2 text-lg font-bold">Maria Smantha</h5>
+              <h6 class="mb-4 font-medium text-primary dark:text-primary-400">CEO Gojek</h6>
+              <p class="mb-4">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta tenetur minima, vel voluptatibus, ipsum aut blanditiis dolorum impedit atque enim laboriosam itaque numquam ipsam delectus dolore. Voluptatum delectus maxime hic
+                iure doloribus quas minima fuga. Illo laboriosam esse blanditiis dolorum quasi explicabo soluta ducimus libero optio amet, dolorem, debitis iste!s
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 96 960 960" class="inline-block w-6">
+                  <path fill="currentColor" d="M580 556h160V396H580v160Zm-360 0h160V396H220v160Zm406 220 80-160H520V336h280v288l-76 152h-98Zm-360 0 80-160H160V336h280v288l-76 152h-98Zm34-300Zm360 0Z" />
+                </svg>
+              </p>
+              <ul class="mb-0 flex justify-center">
+                <li>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 96 960 960" class="w-5 text-warning">
+                    <path fill="currentColor" d="m233 976 65-281L80 506l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z" />
+                  </svg>
+                </li>
+                <li>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 96 960 960" class="w-5 text-warning">
+                    <path fill="currentColor" d="m233 976 65-281L80 506l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z" />
+                  </svg>
+                </li>
+                <li>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 96 960 960" class="w-5 text-warning">
+                    <path fill="currentColor" d="m233 976 65-281L80 506l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z" />
+                  </svg>
+                </li>
+                <li>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 96 960 960" class="w-5 text-warning">
+                    <path fill="currentColor" d="m233 976 65-281L80 506l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z" />
+                  </svg>
+                </li>
+                <li>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 96 960 960" class="w-5 text-warning">
+                    <path fill="currentColor" d="m480 757 157 95-42-178 138-120-182-16-71-168v387ZM233 976l65-281L80 506l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z" />
+                  </svg>
+                </li>
+              </ul>
+            </div>
+            <div class="mb-12 md:mb-0">
+              <div class="mb-6 flex justify-center">
+                <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(2).jpg" class="w-32 rounded-full shadow-lg dark:shadow-black/20" />
+              </div>
+              <h5 class="mb-2 text-lg font-bold">Lisa Cudrow</h5>
+              <h6 class="mb-4 font-medium text-primary dark:text-primary-400">CEO Toko Pedia</h6>
+              <p class="mb-4">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur iusto aperiam fuga aspernatur corporis quaerat totam aut inventore sit. Iste nemo, deserunt quasi dolorem quia incidunt eligendi! Debitis nemo odit
+                officiis assumenda molestiae, nostrum dicta dolore id officia magnam non. Ipsum voluptas tempora magni, porro repudiandae deserunt sapiente non dolor!
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 96 960 960" class="inline-block w-6">
+                  <path fill="currentColor" d="M580 556h160V396H580v160Zm-360 0h160V396H220v160Zm406 220 80-160H520V336h280v288l-76 152h-98Zm-360 0 80-160H160V336h280v288l-76 152h-98Zm34-300Zm360 0Z" />
+                </svg>
+              </p>
+              <ul class="mb-0 flex justify-center">
+                <li>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 96 960 960" class="w-5 text-warning">
+                    <path fill="currentColor" d="m233 976 65-281L80 506l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z" />
+                  </svg>
+                </li>
+                <li>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 96 960 960" class="w-5 text-warning">
+                    <path fill="currentColor" d="m233 976 65-281L80 506l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z" />
+                  </svg>
+                </li>
+                <li>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 96 960 960" class="w-5 text-warning">
+                    <path fill="currentColor" d="m233 976 65-281L80 506l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z" />
+                  </svg>
+                </li>
+                <li>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 96 960 960" class="w-5 text-warning">
+                    <path fill="currentColor" d="m233 976 65-281L80 506l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z" />
+                  </svg>
+                </li>
+                <li>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 96 960 960" class="w-5 text-warning">
+                    <path fill="currentColor" d="m233 976 65-281L80 506l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z" />
+                  </svg>
+                </li>
+              </ul>
+            </div>
+            <div class="mb-0">
+              <div class="mb-6 flex justify-center">
+                <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(9).jpg" class="w-32 rounded-full shadow-lg dark:shadow-black/20" />
+              </div>
+              <h5 class="mb-2 text-lg font-bold">John Smith</h5>
+              <h6 class="mb-4 font-medium text-primary dark:text-primary-400">CEO Shopee</h6>
+              <p class="mb-4">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum mollitia error harum. Quia fugiat asperiores esse voluptas molestias iusto sunt natus inventore? Error, odio tenetur eum blanditiis cumque fugiat placeat
+                voluptas voluptatem itaque! Perspiciatis neque eius vel nulla dolorum ratione asperiores beatae! Reiciendis ad quam totam, aspernatur veniam autem repudiandae!
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 96 960 960" class="inline-block w-6">
+                  <path fill="currentColor" d="M580 556h160V396H580v160Zm-360 0h160V396H220v160Zm406 220 80-160H520V336h280v288l-76 152h-98Zm-360 0 80-160H160V336h280v288l-76 152h-98Zm34-300Zm360 0Z" />
+                </svg>
+              </p>
+              <ul class="mb-0 flex justify-center">
+                <li>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 96 960 960" class="w-5 text-warning">
+                    <path fill="currentColor" d="m233 976 65-281L80 506l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z" />
+                  </svg>
+                </li>
+                <li>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 96 960 960" class="w-5 text-warning">
+                    <path fill="currentColor" d="m233 976 65-281L80 506l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z" />
+                  </svg>
+                </li>
+                <li>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 96 960 960" class="w-5 text-warning">
+                    <path fill="currentColor" d="m233 976 65-281L80 506l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z" />
+                  </svg>
+                </li>
+                <li>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 96 960 960" class="w-5 text-warning">
+                    <path fill="currentColor" d="m233 976 65-281L80 506l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z" />
+                  </svg>
+                </li>
+                <li>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 96 960 960" class="w-5 text-warning">
+                    <path fill="currentColor" d="m323 851 157-94 157 95-42-178 138-120-182-16-71-168-71 167-182 16 138 120-42 178Zm-90 125 65-281L80 506l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Zm247-355Z" />
+                  </svg>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- Testimonials Section End -->
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="pt-36 pb-32">
+      <div class="container">
+        <div class="w-full px-4">
+          <div class="max-w-xl mx-auto text-center mb-16">
+            <h4 class="font-semibold text-lg text-primary mb-2">Gallery</h4>
+            <h2 class="font-bold text-dark text-3xl mb-4 sm:text-4xl lg:text-4xl">Our Work</h2>
+          </div>
+        </div>
+        <div class="container mx-auto px-5 py-2 lg:px-32 lg:pt-24">
+          <div class="-m-1 flex flex-wrap md:-m-2">
+            <div class="flex w-1/2 flex-wrap">
+              <div class="w-1/2 p-1 md:p-2">
+                <img alt="gallery" class="block h-full w-full rounded-lg object-cover object-center" src="https://source.unsplash.com/380x180?html" />
+              </div>
+              <div class="w-1/2 p-1 md:p-2">
+                <img alt="gallery" class="block h-full w-full rounded-lg object-cover object-center" src="https://source.unsplash.com/480x240?html" />
+              </div>
+              <div class="w-full p-1 md:p-2">
+                <img alt="gallery" class="block h-full w-full rounded-lg object-cover object-center" src="https://source.unsplash.com/960x480?html" />
+              </div>
+            </div>
+            <div class="flex w-1/2 flex-wrap">
+              <div class="w-full p-1 md:p-2">
+                <img alt="gallery" class="block h-full w-full rounded-lg object-cover object-center" src="https://source.unsplash.com/720x360?html" />
+              </div>
+              <div class="w-1/2 p-1 md:p-2">
+                <img alt="gallery" class="block h-full w-full rounded-lg object-cover object-center" src="https://source.unsplash.com/640x320?html" />
+              </div>
+              <div class="w-1/2 p-1 md:p-2">
+                <img alt="gallery" class="block h-full w-full rounded-lg object-cover object-center" src="https://source.unsplash.com/516x258?html" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Gallery Section End -->
+
+    <!-- Contact Section -->
+    <div class="bg-local bg-opacity-80" style="background-image: url(dist/img/bg2.jpg)">
+      <section id="contact" class="pt-36 pb-32">
+        <div class="container">
+          <div class="w-full px-4">
+            <div class="max-w-xl mx-auto text-center mb-16">
+              <h4 class="font-semibold text-lg text-primary mb-2">Contact</h4>
+              <h2 class="font-bold text-dark text-3xl mb-4 sm:text-4xl lg:text-4xl">Hubungi Kami</h2>
+            </div>
+            <form>
+              <div class="w-full lg:w-2/3 lg:mx-auto">
+                <div class="w-full px-4 mb-8">
+                  <label for="name" class="text-base font-semibold text-dark">Nama</label>
+                  <input type="text" id="name" class="w-full bg-slate-200 text-dark p-3 rounded-md focus:outline-none focus:ring-primary focus:ring-1 focus: border-primary" />
+                </div>
+                <div class="w-full px-4 mb-8">
+                  <label for="email" class="text-base font-semibold text-dark">Email</label>
+                  <input type="email" id="email" class="w-full bg-slate-200 text-dark p-3 rounded-md focus:outline-none focus:ring-primary focus:ring-1 focus: border-primary" />
+                </div>
+                <div class="w-full px-4 mb-8">
+                  <label for="message" class="text-base font-semibold text-dark">Pesan</label>
+                  <textarea type="email" id="email" class="w-full bg-slate-200 text-dark p-3 rounded-md focus:outline-none focus:ring-primary focus:ring-1 focus: border-primary h-32"></textarea>
+                </div>
+                <div class="w-full px-4">
+                  <button class="text-base font-semibold text-white bg-primary py-3 px-8 rounded-lg w-full hover:opacity-80 hover:shadow-lg transition duration-300">Kirim</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- Contact Section End -->
+
+    <!-- Footer -->
+    <footer class="bg-dark pt-24 pb-12">
+      <div class="container">
+        <div class="w-full px-4">
+          <div class="max-w-xl mx-auto text-center mb-16">
+            <h2 class="font-semibold text-primary text-3xl mb-4 sm:text-4xl lg:text-5xl">CA Web Develope</h2>
+            <p class="text-base text-white">Palembang, Sumatera Selatan 30151</p>
+          </div>
+        </div>
+        <div class="w-full pt-10 border-t border-slate-700">
+          <div class="flex items-center justify-center mb-5">
+            <!-- Instagram -->
+            <a
+              href="https://www.instagram.com/pupr_sda_sumatera8/"
+              target="_blank"
+              class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white trasition duration-500 ease-in-out"
+            >
+              <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <title>Instagram</title>
+                <path
+                  d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"
+                />
+              </svg>
+            </a>
+            <!-- Instagram End -->
+          </div>
+          <p class="font-medium text-sm text-slate-500 text-center">
+            Design By <a href="https://instagram.com/maalhakim_?igshid=OGQ5ZDc2ODk2ZA==" target="_blank" class="font-bold text-xs text-primary">Muhammad Abdullah Alhakim</a> ©2024 CA Web Develope | All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer End -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+
+    <script src="dist/js/script.js"></script>
+  </body>
+</html>
